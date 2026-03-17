@@ -3,36 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Brisas Empreendimentos - Construindo sonhos há mais de 17 anos em Natal/RN. Casas populares com qualidade e sustentabilidade.">
-    <meta name="keywords" content="construtora, casas, imóveis, Natal, RN, moradia popular, sustentabilidade">
-    <title>Brisas Empreendimentos | Realizando Sonhos em Natal/RN</title>
+    <meta name="description" content="Brisas Empreendimentos - Construindo sonhos há mais de 17 anos em Extremoz/RN. Casas e Duplex com qualidade e sustentabilidade.">
+    <meta name="keywords" content="construtora, casas, duplex, imóveis, Extremoz, RN, moradia popular, sustentabilidade">
+    <title>Brisas Empreendimentos | Realizando Sonhos em Extremoz/RN</title>
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="apple-touch-icon" href="images/favicon.png">
     
-    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&family=Open+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <!-- Preloader -->
     <div id="preloader">
         <div class="loader">
-            <div class="house-icon">
-                <i class="fas fa-home"></i>
-            </div>
-            <span>Carregando...</span>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <span>BRISAS</span>
         </div>
     </div>
 
@@ -55,9 +48,9 @@
                         <li><a href="#diferenciais" class="nav-link">Diferenciais</a></li>
                         <li><a href="#sustentabilidade" class="nav-link">Sustentabilidade</a></li>
                         <li><a href="#empreendimentos" class="nav-link">Empreendimentos</a></li>
-                        <li><a href="#casa-modelo" class="nav-link">Casa Modelo</a></li>
+                        <li><a href="#casa-modelo" class="nav-link">Casas Modelo</a></li>
                         <li><a href="#galeria" class="nav-link">Obras</a></li>
-                        <li><a href="#contato" class="nav-link">Contato</a></li>
+                        <li><a href="#contato" class="nav-link nav-cta">Contato</a></li>
                     </ul>
                 </div>
                 
@@ -72,65 +65,83 @@
 
     <!-- Hero Section -->
     <section class="hero" id="home">
-        <div class="hero-slider">
-            <div class="hero-slide active" style="background-image: url('images/hero-1.jpg');">
-                <div class="hero-overlay"></div>
+        <div class="hero-bg">
+            <div class="hero-slider">
+                <div class="hero-slide active" style="background-image: url('images/hero-1.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/hero-2.jpg');"></div>
+                <div class="hero-slide" style="background-image: url('images/hero-3.jpg');"></div>
             </div>
-            <div class="hero-slide" style="background-image: url('images/hero-2.jpg');">
-                <div class="hero-overlay"></div>
-            </div>
-            <div class="hero-slide" style="background-image: url('images/hero-3.jpg');">
-                <div class="hero-overlay"></div>
-            </div>
+            <div class="hero-overlay"></div>
+            <canvas class="hero-canvas" id="heroCanvas"></canvas>
         </div>
         
         <div class="hero-content">
             <div class="container">
-                <span class="hero-badge" data-aos="fade-down">+ de 17 anos de experiência</span>
-                <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
-                    Realizando o sonho da <br><span>casa própria</span>
-                </h1>
-                <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
-                    Mais de 2.000 famílias já conquistaram seu lar com a Brisas Empreendimentos. 
-                    Qualidade, confiança e compromisso com você.
-                </p>
-                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
-                    <a href="#empreendimentos" class="btn btn-primary">
-                        <i class="fas fa-building"></i> Ver Empreendimentos
-                    </a>
-                    <a href="#contato" class="btn btn-outline">
-                        <i class="fas fa-phone"></i> Fale Conosco
-                    </a>
+                <div class="hero-inner">
+                    <span class="hero-badge" data-aos="fade-down">
+                        <i class="fas fa-award"></i>
+                        + de 17 anos construindo sonhos
+                    </span>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        Realizando o sonho da <br><span class="gradient-text">casa própria</span>
+                    </h1>
+                    <p class="hero-description" data-aos="fade-up" data-aos-delay="200">
+                        Mais de 2.000 famílias já conquistaram seu lar com a Brisas Empreendimentos. 
+                        Qualidade, confiança e compromisso com você.
+                    </p>
+                    <div class="hero-buttons" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#empreendimentos" class="btn btn-primary btn-glow">
+                            <i class="fas fa-building"></i> Ver Empreendimentos
+                        </a>
+                        <a href="https://wa.me/558491153838" target="_blank" rel="noopener noreferrer" class="btn btn-outline-hero">
+                            <i class="fab fa-whatsapp"></i> Fale Conosco
+                        </a>
+                    </div>
+                    
+                    <div class="hero-slider-nav" data-aos="fade-up" data-aos-delay="400">
+                        <button class="slider-dot active" data-slide="0"></button>
+                        <button class="slider-dot" data-slide="1"></button>
+                        <button class="slider-dot" data-slide="2"></button>
+                    </div>
                 </div>
             </div>
         </div>
         
         <div class="hero-stats">
-            <div class="stat-item" data-aos="zoom-in" data-aos-delay="400">
-                <i class="fas fa-home"></i>
-                <div class="stat-content">
-                    <span class="stat-number" data-count="2000">0</span>
-                    <span class="stat-label">Unidades Entregues</span>
-                </div>
-            </div>
-            <div class="stat-item" data-aos="zoom-in" data-aos-delay="500">
-                <i class="fas fa-map-marked-alt"></i>
-                <div class="stat-content">
-                    <span class="stat-number" data-count="124">0</span>
-                    <span class="stat-label">Mil m² de Atuação</span>
-                </div>
-            </div>
-            <div class="stat-item" data-aos="zoom-in" data-aos-delay="600">
-                <i class="fas fa-calendar-check"></i>
-                <div class="stat-content">
-                    <span class="stat-number" data-count="17">0</span>
-                    <span class="stat-label">Anos de Mercado</span>
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="stat-icon"><i class="fas fa-home"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-count="2000">0</span>
+                            <span class="stat-label">Unidades Entregues</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-count="124">0</span>
+                            <span class="stat-label">Mil m² de Atuação</span>
+                        </div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-card" data-aos="zoom-in" data-aos-delay="600">
+                        <div class="stat-icon"><i class="fas fa-calendar-check"></i></div>
+                        <div class="stat-content">
+                            <span class="stat-number" data-count="17">0</span>
+                            <span class="stat-label">Anos de Mercado</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
         
-        <a href="#sobre" class="scroll-down">
-            <i class="fas fa-chevron-down"></i>
+        <a href="#sobre" class="scroll-indicator">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll</span>
         </a>
     </section>
 
@@ -153,7 +164,7 @@
                 
                 <div class="sobre-content" data-aos="fade-left">
                     <span class="section-badge">Conheça a Brisas</span>
-                    <h2 class="section-title">Transformando o mercado de moradia popular em Natal/RN</h2>
+                    <h2 class="section-title">Transformando o mercado de moradia popular em <span class="gradient-text">Extremoz/RN</span></h2>
                     <p class="sobre-text">
                         Fundada em 2009 em Natal/RN, a <strong>Brisas Empreendimentos</strong> consolida sua atuação no mercado imobiliário potiguar.
                     </p>
@@ -194,10 +205,11 @@
 
     <!-- Diferenciais Section -->
     <section class="diferenciais" id="diferenciais">
+        <div class="section-bg-pattern"></div>
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-badge">Por que nos escolher</span>
-                <h2 class="section-title">Por que a Brisas se destaca?</h2>
+                <h2 class="section-title">Por que a Brisas se <span class="gradient-text">destaca</span>?</h2>
                 <p class="section-description">
                     Construção industrializada com tecnologia de ponta, reduzindo tempo de execução e impactos ambientais.
                 </p>
@@ -205,49 +217,37 @@
             
             <div class="diferenciais-grid">
                 <div class="diferencial-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-industry"></i>
-                    </div>
+                    <div class="diferencial-icon"><i class="fas fa-industry"></i></div>
                     <h3>Construção Industrializada</h3>
                     <p>Todas as etapas da produção de estruturas pré-moldadas são realizadas na fábrica, antes da execução na obra, garantindo qualidade superior.</p>
                 </div>
                 
                 <div class="diferencial-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-clock"></i>
-                    </div>
+                    <div class="diferencial-icon"><i class="fas fa-clock"></i></div>
                     <h3>Agilidade na Construção</h3>
                     <p>Redução significativa no tempo de execução através de processos automatizados e metodologias modernas de construção.</p>
                 </div>
                 
                 <div class="diferencial-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-broom"></i>
-                    </div>
+                    <div class="diferencial-icon"><i class="fas fa-broom"></i></div>
                     <h3>Obra Mais Limpa</h3>
                     <p>Na estrutura pré-moldada não ocorre quebra na obra, eliminando desperdícios e entulhos, com resultados satisfatórios.</p>
                 </div>
                 
                 <div class="diferencial-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-cogs"></i>
-                    </div>
+                    <div class="diferencial-icon"><i class="fas fa-cogs"></i></div>
                     <h3>Alto Controle Tecnológico</h3>
                     <p>Peças com controle tecnológico rigoroso, processos automatizados interligados aos planos de planejamento e controle.</p>
                 </div>
                 
                 <div class="diferencial-card" data-aos="fade-up" data-aos-delay="500">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-certificate"></i>
-                    </div>
+                    <div class="diferencial-icon"><i class="fas fa-certificate"></i></div>
                     <h3>Avaliação Técnica</h3>
                     <p>Elaboração de avaliações técnicas dos produtos para composição do sistema construtivo, garantindo excelência.</p>
                 </div>
                 
                 <div class="diferencial-card" data-aos="fade-up" data-aos-delay="600">
-                    <div class="diferencial-icon">
-                        <i class="fas fa-truck"></i>
-                    </div>
+                    <div class="diferencial-icon"><i class="fas fa-truck"></i></div>
                     <h3>Logística Integrada</h3>
                     <p>Metodologias de análise e controle de todos os processos envolvidos, desde confecção até montagem na obra.</p>
                 </div>
@@ -268,39 +268,28 @@
                     
                     <div class="sustentabilidade-benefits">
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-recycle"></i>
-                            </div>
+                            <div class="benefit-icon"><i class="fas fa-recycle"></i></div>
                             <div class="benefit-content">
                                 <h4>Redução de Desperdícios</h4>
                                 <p>Eliminação de entulho no canteiro de obras e redução de emissões.</p>
                             </div>
                         </div>
-                        
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-leaf"></i>
-                            </div>
+                            <div class="benefit-icon"><i class="fas fa-leaf"></i></div>
                             <div class="benefit-content">
                                 <h4>Desmaterialização</h4>
                                 <p>Uso de concretos classe C40 permite seções mais esbeltas, reduzindo volume total.</p>
                             </div>
                         </div>
-                        
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-shield-alt"></i>
-                            </div>
+                            <div class="benefit-icon"><i class="fas fa-shield-alt"></i></div>
                             <div class="benefit-content">
                                 <h4>Maior Durabilidade</h4>
                                 <p>Produção controlada garante menor necessidade de manutenção.</p>
                             </div>
                         </div>
-                        
                         <div class="benefit-item">
-                            <div class="benefit-icon">
-                                <i class="fas fa-file-contract"></i>
-                            </div>
+                            <div class="benefit-icon"><i class="fas fa-file-contract"></i></div>
                             <div class="benefit-content">
                                 <h4>Normas Técnicas</h4>
                                 <p>Alinhamento às práticas ESG e normas como NBR 9062.</p>
@@ -319,12 +308,10 @@
             </div>
             
             <div class="acv-section" data-aos="fade-up">
-                <div class="acv-icon">
-                    <i class="fas fa-sync-alt"></i>
-                </div>
+                <div class="acv-icon"><i class="fas fa-sync-alt"></i></div>
                 <div class="acv-content">
                     <h3>Análise do Ciclo de Vida (ACV)</h3>
-                    <p>Comparando o impacto ambiental e a eficiência de sistemas construtivos desde a extração de matérias-primas até a disposição final. As estruturas pré-moldadas apresentam vantagens significativas em sustentabilidade e eficiência produtiva quando comparadas aos métodos convencionais, principalmente devido ao controle rigoroso em ambiente industrial.</p>
+                    <p>Comparando o impacto ambiental e a eficiência de sistemas construtivos desde a extração de matérias-primas até a disposição final. As estruturas pré-moldadas apresentam vantagens significativas em sustentabilidade e eficiência produtiva quando comparadas aos métodos convencionais.</p>
                 </div>
             </div>
         </div>
@@ -336,9 +323,7 @@
             <div class="section-header" data-aos="fade-up">
                 <span class="section-badge">Nossos Projetos</span>
                 <h2 class="section-title">Empreendimentos</h2>
-                <p class="section-description">
-                    Conheça nossos projetos na região metropolitana de Natal/RN
-                </p>
+                <p class="section-description">Conheça nossos projetos na região metropolitana de Natal/RN</p>
             </div>
             
             <div class="empreendimentos-filter" data-aos="fade-up">
@@ -349,105 +334,130 @@
             </div>
             
             <div class="empreendimentos-grid">
-                <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="100">
+                <!-- Brisas da Lagoa - DUPLEX - Em andamento -->
+                <div class="empreendimento-card featured" data-category="andamento" data-aos="fade-up" data-aos-delay="100">
                     <div class="empreendimento-image">
-                        <img src="images/empreendimento-1.jpg" alt="Brisas da Lagoa - Brisas Empreendimentos">
-                        <span class="empreendimento-status entregue">Entregue</span>
+                        <img src="images/empreendimento-1.jpg" alt="Brisas da Lagoa - Duplex">
+                        <span class="empreendimento-status andamento">Em Andamento</span>
+                        <span class="empreendimento-type-badge">Duplex</span>
                     </div>
                     <div class="empreendimento-content">
                         <h3>Brisas da Lagoa</h3>
-                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Natal/RN</p>
+                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Extremoz/RN</p>
                         <ul class="empreendimento-features">
-                            <li><i class="fas fa-home"></i> Casas de 2 quartos</li>
-                            <li><i class="fas fa-car"></i> Vaga de garagem</li>
-                            <li><i class="fas fa-ruler-combined"></i> Padrão Brisas</li>
+                            <li><i class="fas fa-home"></i> Duplex de 2/4 e 3/4 sendo um com suíte</li>
+                            <li><i class="fas fa-car"></i> Vaga para garagem</li>
+                            <li><i class="fas fa-swimming-pool"></i> Área de lazer completa</li>
                         </ul>
-                        <a href="#contato" class="btn btn-secondary">Saiba Mais</a>
+                        <a href="casa-duplex.html" class="btn btn-secondary"><i class="fas fa-eye"></i> Ver Casa Modelo</a>
                     </div>
                 </div>
                 
+                <!-- Jardim Portugal II -->
                 <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="200">
                     <div class="empreendimento-image">
-                        <img src="images/empreendimento-2.jpg" alt="Brisas do Sol - Brisas Empreendimentos">
+                        <img src="images/empreendimento-2.jpg" alt="Jardim Portugal II">
+                        <span class="empreendimento-status entregue">Entregue</span>
+                    </div>
+                    <div class="empreendimento-content">
+                        <h3>Jardim Portugal II</h3>
+                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Extremoz/RN</p>
+                        <ul class="empreendimento-features">
+                            <li><i class="fas fa-home"></i> Casas de 2/4</li>
+                            <li><i class="fas fa-car"></i> Vaga para garagem</li>
+                            <li><i class="fas fa-ruler-combined"></i> 49,95 m² de área construída</li>
+                        </ul>
+                        <a href="casa-normal.html" class="btn btn-secondary"><i class="fas fa-eye"></i> Ver Casa Modelo</a>
+                    </div>
+                </div>
+                
+                <!-- Brisas do Sol -->
+                <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="300">
+                    <div class="empreendimento-image">
+                        <img src="images/empreendimento-3.jpg" alt="Brisas do Sol">
                         <span class="empreendimento-status entregue">Entregue</span>
                     </div>
                     <div class="empreendimento-content">
                         <h3>Brisas do Sol</h3>
-                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Natal/RN</p>
+                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Extremoz/RN</p>
                         <ul class="empreendimento-features">
-                            <li><i class="fas fa-home"></i> Casas de 2 quartos</li>
-                            <li><i class="fas fa-car"></i> Vaga de garagem</li>
-                            <li><i class="fas fa-ruler-combined"></i> Padrão Brisas</li>
+                            <li><i class="fas fa-home"></i> Casas de 2/4</li>
+                            <li><i class="fas fa-car"></i> Vaga para garagem</li>
+                            <li><i class="fas fa-ruler-combined"></i> 49,95 m² de área construída</li>
                         </ul>
-                        <a href="#contato" class="btn btn-secondary">Saiba Mais</a>
+                        <a href="casa-normal.html" class="btn btn-secondary"><i class="fas fa-eye"></i> Ver Casa Modelo</a>
                     </div>
                 </div>
                 
-                <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="300">
+                <!-- Brisas dos Ventos -->
+                <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="400">
                     <div class="empreendimento-image">
-                        <img src="images/empreendimento-3.jpg" alt="Brisas dos Ventos - Brisas Empreendimentos">
+                        <img src="images/empreendimento-4.jpg" alt="Brisas dos Ventos">
                         <span class="empreendimento-status entregue">Entregue</span>
                     </div>
                     <div class="empreendimento-content">
                         <h3>Brisas dos Ventos</h3>
-                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Natal/RN</p>
+                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Extremoz/RN</p>
                         <ul class="empreendimento-features">
-                            <li><i class="fas fa-home"></i> Casas de 2 quartos</li>
-                            <li><i class="fas fa-car"></i> Vaga de garagem</li>
-                            <li><i class="fas fa-ruler-combined"></i> Padrão Brisas</li>
+                            <li><i class="fas fa-home"></i> Casas de 2/4</li>
+                            <li><i class="fas fa-car"></i> Vaga para garagem</li>
+                            <li><i class="fas fa-ruler-combined"></i> 49,95 m² de área construída</li>
                         </ul>
-                        <a href="#contato" class="btn btn-secondary">Saiba Mais</a>
+                        <a href="casa-normal.html" class="btn btn-secondary"><i class="fas fa-eye"></i> Ver Casa Modelo</a>
                     </div>
                 </div>
                 
-                <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="400">
+                <!-- Brisas das Rosas -->
+                <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="500">
                     <div class="empreendimento-image">
-                        <img src="images/empreendimento-4.jpg" alt="Brisas das Rosas - Brisas Empreendimentos">
+                        <img src="images/empreendimento-1.jpg" alt="Brisas das Rosas">
                         <span class="empreendimento-status entregue">Entregue</span>
                     </div>
                     <div class="empreendimento-content">
                         <h3>Brisas das Rosas</h3>
-                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Natal/RN</p>
+                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Extremoz/RN</p>
                         <ul class="empreendimento-features">
-                            <li><i class="fas fa-home"></i> Casas de 2 quartos</li>
-                            <li><i class="fas fa-car"></i> Vaga de garagem</li>
-                            <li><i class="fas fa-ruler-combined"></i> Padrão Brisas</li>
+                            <li><i class="fas fa-home"></i> Casas de 2/4</li>
+                            <li><i class="fas fa-car"></i> Vaga para garagem</li>
+                            <li><i class="fas fa-ruler-combined"></i> 49,95 m² de área construída</li>
                         </ul>
-                        <a href="#contato" class="btn btn-secondary">Saiba Mais</a>
+                        <a href="casa-normal.html" class="btn btn-secondary"><i class="fas fa-eye"></i> Ver Casa Modelo</a>
                     </div>
                 </div>
                 
-                <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="500">
+                <!-- Brisas das Flores -->
+                <div class="empreendimento-card" data-category="entregues" data-aos="fade-up" data-aos-delay="600">
                     <div class="empreendimento-image">
-                        <img src="images/empreendimento-1.jpg" alt="Brisas das Flores - Brisas Empreendimentos">
+                        <img src="images/empreendimento-2.jpg" alt="Brisas das Flores">
                         <span class="empreendimento-status entregue">Entregue</span>
                     </div>
                     <div class="empreendimento-content">
                         <h3>Brisas das Flores</h3>
-                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Natal/RN</p>
+                        <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Extremoz/RN</p>
                         <ul class="empreendimento-features">
-                            <li><i class="fas fa-home"></i> Casas de 2 quartos</li>
-                            <li><i class="fas fa-car"></i> Vaga de garagem</li>
-                            <li><i class="fas fa-ruler-combined"></i> Padrão Brisas</li>
+                            <li><i class="fas fa-home"></i> Casas de 2/4</li>
+                            <li><i class="fas fa-car"></i> Vaga para garagem</li>
+                            <li><i class="fas fa-ruler-combined"></i> 49,95 m² de área construída</li>
                         </ul>
-                        <a href="#contato" class="btn btn-secondary">Saiba Mais</a>
+                        <a href="casa-normal.html" class="btn btn-secondary"><i class="fas fa-eye"></i> Ver Casa Modelo</a>
                     </div>
                 </div>
                 
-                <div class="empreendimento-card" data-category="lancamentos" data-aos="fade-up" data-aos-delay="600">
+                <!-- Brisas de Extremoz -->
+                <div class="empreendimento-card" data-category="lancamentos" data-aos="fade-up" data-aos-delay="700">
                     <div class="empreendimento-image">
-                        <img src="images/empreendimento-2.jpg" alt="Brisas de Extremoz - Brisas Empreendimentos">
+                        <img src="images/empreendimento-3.jpg" alt="Brisas de Extremoz">
                         <span class="empreendimento-status lancamento">Breve Lançamento</span>
                     </div>
                     <div class="empreendimento-content">
                         <h3>Brisas de Extremoz</h3>
                         <p class="empreendimento-location"><i class="fas fa-map-marker-alt"></i> Extremoz/RN</p>
                         <ul class="empreendimento-features">
-                            <li><i class="fas fa-home"></i> Casas de 2 quartos</li>
-                            <li><i class="fas fa-car"></i> Vaga de garagem</li>
+                            <li><i class="fas fa-home"></i> Casas de 2/4</li>
+                            <li><i class="fas fa-car"></i> Vaga para garagem</li>
                             <li><i class="fas fa-ruler-combined"></i> Padrão Brisas</li>
                         </ul>
-                        <a href="#contato" class="btn btn-secondary">Saiba Mais</a>
+                        <a href="casa-normal.html" class="btn btn-secondary"><i class="fas fa-eye"></i> Ver Casa Modelo</a>
                     </div>
                 </div>
             </div>
@@ -455,136 +465,88 @@
     </section>
 
     <!-- Casa Modelo Section -->
-    <section class="galeria" id="casa-modelo">
+    <section class="casa-modelo-section" id="casa-modelo">
+        <div class="section-bg-pattern"></div>
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-badge">Conheça por Dentro</span>
-                <h2 class="section-title">Casa Modelo</h2>
-                <p class="section-description">
-                    Veja cada detalhe da nossa casa modelo. Qualidade e acabamento em cada ambiente.
-                </p>
+                <h2 class="section-title">Casas <span class="gradient-text">Modelo</span></h2>
+                <p class="section-description">Escolha o modelo e explore cada detalhe dos nossos imóveis</p>
             </div>
             
-            <div class="galeria-grid casa-modelo-grid">
-                <!-- Exterior -->
-                <div class="galeria-item large" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="images/casa-fachada.jpg" alt="Fachada - Casa Modelo Brisas Empreendimentos">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-home"></i>
-                        <span>Fachada</span>
+            <div class="modelos-grid">
+                <a href="casa-normal.html" class="modelo-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="modelo-image">
+                        <img src="images/casa-fachada.jpg" alt="Casa Modelo - Padrão">
+                        <div class="modelo-overlay">
+                            <div class="modelo-overlay-content">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Explorar Ambientes</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
+                    <div class="modelo-content">
+                        <span class="modelo-tag">Padrão</span>
+                        <h3>Casa Modelo</h3>
+                        <p>Casas de 2/4 com vaga para garagem e 49,95 m² de área construída</p>
+                        <div class="modelo-specs">
+                            <span><i class="fas fa-bed"></i> 2 Quartos</span>
+                            <span><i class="fas fa-car"></i> Garagem</span>
+                            <span><i class="fas fa-ruler-combined"></i> 49,95 m²</span>
+                        </div>
+                    </div>
+                </a>
                 
-                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="150">
-                    <img src="images/casa-entrada-direita.jpg" alt="Entrada Lateral Direita - Casa Modelo Brisas">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-door-open"></i>
-                        <span>Entrada Direita</span>
+                <a href="casa-duplex.html" class="modelo-card duplex" data-aos="fade-up" data-aos-delay="200">
+                    <div class="modelo-image">
+                        <img src="images/fachada-duplex.jpg" alt="Casa Modelo - Duplex">
+                        <div class="modelo-overlay">
+                            <div class="modelo-overlay-content">
+                                <i class="fas fa-arrow-right"></i>
+                                <span>Explorar Ambientes</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="images/casa-entrada-esquerda.jpg" alt="Entrada Lateral Esquerda - Casa Modelo Brisas">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-door-open"></i>
-                        <span>Entrada Esquerda</span>
+                    <div class="modelo-content">
+                        <span class="modelo-tag duplex-tag">Duplex</span>
+                        <h3>Casa Duplex</h3>
+                        <p>Duplex de 2/4 e 3/4 com suíte, garagem e área de lazer completa</p>
+                        <div class="modelo-specs">
+                            <span><i class="fas fa-bed"></i> 2-3 Quartos</span>
+                            <span><i class="fas fa-car"></i> Garagem</span>
+                            <span><i class="fas fa-swimming-pool"></i> Lazer</span>
+                        </div>
                     </div>
-                </div>
-                
-                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="250">
-                    <img src="images/casa-atras.jpg" alt="Fundos - Casa Modelo Brisas">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-tree"></i>
-                        <span>Fundos</span>
-                    </div>
-                </div>
-                
-                <!-- Interior -->
-                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="300">
-                    <img src="images/casa-sala.jpg" alt="Sala de Estar - Casa Modelo Brisas">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-couch"></i>
-                        <span>Sala de Estar</span>
-                    </div>
-                </div>
-                
-                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="350">
-                    <img src="images/casa-cozinha.jpg" alt="Cozinha - Casa Modelo Brisas">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-utensils"></i>
-                        <span>Cozinha</span>
-                    </div>
-                </div>
-                
-                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="400">
-                    <img src="images/casa-quarto1.jpg" alt="Quarto 1 - Casa Modelo Brisas">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-bed"></i>
-                        <span>Quarto 1</span>
-                    </div>
-                </div>
-                
-                <div class="galeria-item" data-aos="zoom-in" data-aos-delay="450">
-                    <img src="images/casa-quarto2.jpg" alt="Quarto 2 - Casa Modelo Brisas">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-bed"></i>
-                        <span>Quarto 2</span>
-                    </div>
-                </div>
-                
-                <div class="galeria-item large" data-aos="zoom-in" data-aos-delay="500">
-                    <img src="images/casa-banheiro.jpg" alt="Banheiro Social - Casa Modelo Brisas">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-bath"></i>
-                        <span>Banheiro Social</span>
-                    </div>
-                </div>
+                </a>
             </div>
         </div>
     </section>
 
     <!-- Galeria Obras Section -->
-    <section class="galeria obras" id="galeria">
+    <section class="galeria" id="galeria">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-badge">Nossas Obras</span>
-                <h2 class="section-title">Processo Construtivo</h2>
-                <p class="section-description">
-                    Acompanhe o processo de construção dos nossos empreendimentos
-                </p>
+                <h2 class="section-title">Processo <span class="gradient-text">Construtivo</span></h2>
+                <p class="section-description">Acompanhe o processo de construção dos nossos empreendimentos</p>
             </div>
             
-            <div class="galeria-grid obras-grid">
+            <div class="galeria-grid">
                 <div class="galeria-item" data-aos="zoom-in" data-aos-delay="100">
-                    <img src="images/obra-1.jpg" alt="Obra Brisas Empreendimentos">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-hard-hat"></i>
-                        <span>Construção</span>
-                    </div>
+                    <img src="images/obra-1.jpg" alt="Obra Brisas - Construção">
+                    <div class="galeria-overlay"><i class="fas fa-hard-hat"></i><span>Construção</span></div>
                 </div>
-                
                 <div class="galeria-item" data-aos="zoom-in" data-aos-delay="150">
-                    <img src="images/obra-2.jpg" alt="Obra Brisas Empreendimentos">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-hard-hat"></i>
-                        <span>Estrutura</span>
-                    </div>
+                    <img src="images/obra-2.jpg" alt="Obra Brisas - Estrutura">
+                    <div class="galeria-overlay"><i class="fas fa-hard-hat"></i><span>Estrutura</span></div>
                 </div>
-                
                 <div class="galeria-item" data-aos="zoom-in" data-aos-delay="200">
-                    <img src="images/obra-3.jpg" alt="Obra Brisas Empreendimentos">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-hard-hat"></i>
-                        <span>Fundação</span>
-                    </div>
+                    <img src="images/obra-3.jpg" alt="Obra Brisas - Fundação">
+                    <div class="galeria-overlay"><i class="fas fa-hard-hat"></i><span>Fundação</span></div>
                 </div>
-                
                 <div class="galeria-item" data-aos="zoom-in" data-aos-delay="250">
-                    <img src="images/obra-4.png" alt="Obra Brisas Empreendimentos">
-                    <div class="galeria-overlay">
-                        <i class="fas fa-hard-hat"></i>
-                        <span>Acabamento</span>
-                    </div>
+                    <img src="images/obra-4.png" alt="Obra Brisas - Acabamento">
+                    <div class="galeria-overlay"><i class="fas fa-hard-hat"></i><span>Acabamento</span></div>
                 </div>
             </div>
         </div>
@@ -592,13 +554,14 @@
 
     <!-- CTA Section -->
     <section class="cta">
+        <div class="cta-bg" style="background-image: url('images/cta-bg.jpg');"></div>
         <div class="cta-overlay"></div>
         <div class="container">
             <div class="cta-content" data-aos="zoom-in">
-                <h2>Realize o sonho da casa própria!</h2>
+                <h2>Realize o sonho da <span class="gradient-text">casa própria</span>!</h2>
                 <p>Entre em contato conosco e descubra as melhores condições para você e sua família.</p>
                 <div class="cta-buttons">
-                    <a href="https://wa.me/558496346287" target="_blank" class="btn btn-whatsapp">
+                    <a href="https://wa.me/558491153838" target="_blank" rel="noopener noreferrer" class="btn btn-whatsapp btn-glow">
                         <i class="fab fa-whatsapp"></i> WhatsApp
                     </a>
                     <a href="#contato" class="btn btn-outline-white">
@@ -614,69 +577,54 @@
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="section-badge">Fale Conosco</span>
-                <h2 class="section-title">Entre em Contato</h2>
-                <p class="section-description">
-                    Estamos prontos para ajudar você a conquistar sua casa própria
-                </p>
+                <h2 class="section-title">Entre em <span class="gradient-text">Contato</span></h2>
+                <p class="section-description">Estamos prontos para ajudar você a conquistar sua casa própria</p>
             </div>
             
             <div class="contato-grid">
                 <div class="contato-info" data-aos="fade-right">
                     <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
+                        <div class="info-icon"><i class="fas fa-map-marker-alt"></i></div>
                         <div class="info-content">
                             <h4>Endereço</h4>
                             <p>Av. Prudente de Morais, 711<br>Natal/RN</p>
                         </div>
                     </div>
-                    
                     <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
+                        <div class="info-icon"><i class="fas fa-phone-alt"></i></div>
                         <div class="info-content">
                             <h4>Telefone</h4>
-                            <p>+55 84 9634-6287</p>
+                            <p>+55 84 9115-3838</p>
                         </div>
                     </div>
-                    
                     <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-envelope"></i>
+                        <div class="info-icon"><i class="fab fa-whatsapp"></i></div>
+                        <div class="info-content">
+                            <h4>WhatsApp</h4>
+                            <p><a href="https://wa.me/558491153838" target="_blank" rel="noopener noreferrer">+55 84 9115-3838</a></p>
                         </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon"><i class="fas fa-envelope"></i></div>
                         <div class="info-content">
                             <h4>E-mail</h4>
                             <p>contato@brisasempreendimentos.com.br</p>
                         </div>
                     </div>
-                    
                     <div class="info-card">
-                        <div class="info-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
+                        <div class="info-icon"><i class="fas fa-clock"></i></div>
                         <div class="info-content">
                             <h4>Horário</h4>
                             <p>Seg - Sex: 8h às 18h<br>Sáb: 8h às 12h</p>
                         </div>
                     </div>
-                    
                     <div class="social-links">
                         <h4>Siga-nos nas redes</h4>
                         <div class="social-icons">
-                            <a href="https://www.instagram.com/brisasempreendimentos/" target="_blank" class="social-icon instagram">
-                                <i class="fab fa-instagram"></i>
-                            </a>
-                            <a href="#" target="_blank" class="social-icon facebook">
-                                <i class="fab fa-facebook-f"></i>
-                            </a>
-                            <a href="#" target="_blank" class="social-icon youtube">
-                                <i class="fab fa-youtube"></i>
-                            </a>
-                            <a href="#" target="_blank" class="social-icon linkedin">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
+                            <a href="https://www.instagram.com/brisasempreendimentos/" target="_blank" rel="noopener noreferrer" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon youtube"><i class="fab fa-youtube"></i></a>
+                            <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
@@ -693,29 +641,26 @@
                                 <input type="tel" id="telefone" name="telefone" required>
                             </div>
                         </div>
-                        
                         <div class="form-group">
                             <label for="email">E-mail *</label>
                             <input type="email" id="email" name="email" required>
                         </div>
-                        
                         <div class="form-group">
                             <label for="interesse">Interesse</label>
                             <select id="interesse" name="interesse">
                                 <option value="">Selecione...</option>
                                 <option value="comprar">Quero comprar uma casa</option>
+                                <option value="duplex">Interesse em Duplex</option>
                                 <option value="informacoes">Mais informações</option>
                                 <option value="visita">Agendar visita</option>
                                 <option value="outro">Outro assunto</option>
                             </select>
                         </div>
-                        
                         <div class="form-group">
                             <label for="mensagem">Mensagem</label>
                             <textarea id="mensagem" name="mensagem" rows="5" placeholder="Conte-nos como podemos ajudar..."></textarea>
                         </div>
-                        
-                        <button type="submit" class="btn btn-primary btn-block">
+                        <button type="submit" class="btn btn-primary btn-block btn-glow">
                             <i class="fas fa-paper-plane"></i> Enviar Mensagem
                         </button>
                     </form>
@@ -737,9 +682,8 @@
                                 <span class="logo-emp">EMPREENDIMENTOS</span>
                             </div>
                         </div>
-                        <p>Transformando o mercado de moradia popular em Natal/RN desde 2009. Qualidade, confiança e compromisso com você e sua família.</p>
+                        <p>Transformando o mercado de moradia popular em Extremoz/RN desde 2009. Qualidade, confiança e compromisso com você e sua família.</p>
                     </div>
-                    
                     <div class="footer-col">
                         <h4>Links Rápidos</h4>
                         <ul>
@@ -747,50 +691,48 @@
                             <li><a href="#sobre">Sobre</a></li>
                             <li><a href="#diferenciais">Diferenciais</a></li>
                             <li><a href="#empreendimentos">Empreendimentos</a></li>
+                            <li><a href="#casa-modelo">Casas Modelo</a></li>
                             <li><a href="#contato">Contato</a></li>
                         </ul>
                     </div>
-                    
                     <div class="footer-col">
                         <h4>Empreendimentos</h4>
                         <ul>
                             <li><a href="#empreendimentos">Brisas da Lagoa</a></li>
+                            <li><a href="#empreendimentos">Jardim Portugal II</a></li>
                             <li><a href="#empreendimentos">Brisas do Sol</a></li>
                             <li><a href="#empreendimentos">Brisas dos Ventos</a></li>
                             <li><a href="#empreendimentos">Brisas das Rosas</a></li>
                             <li><a href="#empreendimentos">Brisas das Flores</a></li>
-                            <li><a href="#empreendimentos">Brisas de Extremoz</a></li>
                         </ul>
                     </div>
-                    
                     <div class="footer-col">
                         <h4>Contato</h4>
                         <ul class="footer-contact">
                             <li><i class="fas fa-map-marker-alt"></i> Av. Prudente de Morais, 711 - Natal/RN</li>
-                            <li><i class="fas fa-phone-alt"></i> +55 84 9634-6287</li>
+                            <li><i class="fas fa-phone-alt"></i> +55 84 9115-3838</li>
+                            <li><i class="fab fa-whatsapp"></i> +55 84 9115-3838</li>
                             <li><i class="fas fa-envelope"></i> contato@brisasempreendimentos.com.br</li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-        
         <div class="footer-bottom">
             <div class="container">
-                <p>&copy; 2024 Brisas Empreendimentos. Todos os direitos reservados.</p>
+                <p>&copy; 2025 Brisas Empreendimentos. Todos os direitos reservados.</p>
                 <p>Desenvolvido com <i class="fas fa-heart"></i> em Natal/RN</p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top -->
-    <a href="#home" class="back-to-top" id="backToTop">
-        <i class="fas fa-chevron-up"></i>
-    </a>
+    <a href="#home" class="back-to-top" id="backToTop"><i class="fas fa-chevron-up"></i></a>
 
     <!-- WhatsApp Float -->
-    <a href="https://wa.me/558496346287" target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/558491153838" target="_blank" rel="noopener noreferrer" class="whatsapp-float">
         <i class="fab fa-whatsapp"></i>
+        <span class="whatsapp-tooltip">Fale conosco</span>
     </a>
 
     <!-- Lightbox Modal -->
@@ -801,7 +743,6 @@
         <img src="" alt="" class="lightbox-image">
     </div>
 
-    <!-- Scripts -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="js/main.js"></script>
 </body>
