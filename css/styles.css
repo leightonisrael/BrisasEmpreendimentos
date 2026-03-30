@@ -22,7 +22,7 @@
 
     --gradient-main: linear-gradient(135deg, #1a7fb8 0%, #2478b5 50%, #3d6dbd 100%);
     --gradient-dark: linear-gradient(135deg, #0a1628 0%, #152e4a 50%, #0f2137 100%);
-    --gradient-hero: linear-gradient(160deg, rgba(10, 22, 40, 0.93) 0%, rgba(21, 46, 74, 0.88) 50%, rgba(26, 127, 184, 0.25) 100%);
+    --gradient-hero: linear-gradient(160deg, rgba(10, 22, 40, 0.75) 0%, rgba(21, 46, 74, 0.65) 50%, rgba(26, 127, 184, 0.2) 100%);
     --gradient-card: linear-gradient(135deg, rgba(26, 127, 184, 0.07) 0%, rgba(36, 120, 181, 0.03) 100%);
     --gradient-glass: linear-gradient(135deg, rgba(255,255,255,0.08) 0%, rgba(255,255,255,0.03) 100%);
 
@@ -31,6 +31,8 @@
     --danger: #dc2626;
 
     --white: #ffffff;
+    --bg-dark: #1b2e44;
+    --bg-medium: #243a52;
     --gray-50: #f8fafc;
     --gray-100: #f1f5f9;
     --gray-200: #e2e8f0;
@@ -82,8 +84,8 @@ body {
     font-family: var(--font-secondary);
     font-size: 16px;
     line-height: 1.7;
-    color: var(--gray-600);
-    background-color: var(--white);
+    color: var(--gray-300);
+    background-color: var(--primary-900);
     overflow-x: hidden;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -92,7 +94,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-primary);
     font-weight: 700;
-    color: var(--gray-900);
+    color: var(--white);
     line-height: 1.2;
 }
 
@@ -142,15 +144,15 @@ input, textarea, select {
     align-items: center;
     gap: 8px;
     padding: 8px 20px;
-    background: var(--gradient-card);
-    color: var(--primary-500);
+    background: rgba(46, 184, 212, 0.1);
+    color: var(--accent-cyan);
     font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2px;
     border-radius: 30px;
     margin-bottom: 16px;
-    border: 1px solid rgba(26, 127, 184, 0.12);
+    border: 1px solid rgba(46, 184, 212, 0.15);
 }
 
 .section-title {
@@ -161,7 +163,7 @@ input, textarea, select {
 
 .section-description {
     font-size: 1.1rem;
-    color: var(--gray-500);
+    color: var(--gray-400);
     max-width: 600px;
     margin: 0 auto;
 }
@@ -369,18 +371,18 @@ input, textarea, select {
 }
 
 .header.scrolled {
-    background: rgba(255, 255, 255, 0.95);
+    background: rgba(10, 22, 40, 0.95);
     backdrop-filter: blur(20px);
-    box-shadow: 0 1px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 1px 20px rgba(0,0,0,0.2);
 }
 
-.header.scrolled .nav-link { color: var(--gray-700); }
+.header.scrolled .nav-link { color: var(--gray-300); }
 .header.scrolled .nav-link:hover,
-.header.scrolled .nav-link.active { color: var(--primary-500); }
+.header.scrolled .nav-link.active { color: var(--accent-cyan); }
 .header.scrolled .nav-link::after { background: var(--gradient-main); }
-.header.scrolled .logo-brisas { color: var(--primary-700); }
-.header.scrolled .logo-emp { color: var(--gray-500); }
-.header.scrolled .nav-toggle span { background: var(--gray-800); }
+.header.scrolled .logo-brisas { color: var(--white); }
+.header.scrolled .logo-emp { color: var(--gray-400); }
+.header.scrolled .nav-toggle span { background: var(--white); }
 .header.scrolled .nav-cta {
     background: var(--gradient-main) !important;
     color: var(--white) !important;
@@ -754,7 +756,8 @@ input, textarea, select {
 /* ---------- Sobre Section ---------- */
 .sobre {
     padding: 120px 0;
-    background: var(--gray-50);
+    background: linear-gradient(180deg, #1b2e44 0%, #1e3249 100%);
+    color: var(--gray-200);
 }
 
 .sobre-grid {
@@ -822,20 +825,20 @@ input, textarea, select {
 
 .sobre-text {
     margin-bottom: 16px;
-    color: var(--gray-600);
+    color: var(--gray-300);
 }
 
 .sobre-quote {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.05);
     padding: 28px 32px;
-    border-left: 4px solid var(--primary-400);
+    border-left: 4px solid var(--accent-cyan);
     margin: 32px 0;
     border-radius: 0 var(--radius-md) var(--radius-md) 0;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
 }
 
 .sobre-quote i {
-    color: var(--accent-blue);
+    color: var(--accent-cyan);
     font-size: 1.4rem;
     margin-bottom: 10px;
     display: block;
@@ -843,7 +846,7 @@ input, textarea, select {
 
 .sobre-quote p {
     font-style: italic;
-    color: var(--gray-700);
+    color: var(--gray-300);
 }
 
 .sobre-features {
@@ -860,22 +863,23 @@ input, textarea, select {
 }
 
 .feature-item i {
-    color: var(--accent-blue);
+    color: var(--accent-cyan);
     font-size: 1.1rem;
 }
 
 .feature-item span {
     font-weight: 600;
-    color: var(--gray-800);
+    color: var(--gray-200);
     font-size: 0.95rem;
 }
 
 /* ---------- Diferenciais Section ---------- */
 .diferenciais {
     padding: 120px 0;
-    background: var(--white);
+    background: linear-gradient(180deg, #243a52 0%, #27405a 100%);
     position: relative;
     overflow: hidden;
+    color: var(--gray-200);
 }
 
 .diferenciais-grid {
@@ -885,13 +889,13 @@ input, textarea, select {
 }
 
 .diferencial-card {
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.05);
     padding: 40px 32px;
     border-radius: var(--radius-lg);
     text-align: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     transition: var(--transition-normal);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     position: relative;
     overflow: hidden;
 }
@@ -914,8 +918,9 @@ input, textarea, select {
 
 .diferencial-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: transparent;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border-color: rgba(46, 184, 212, 0.2);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .diferencial-icon {
@@ -950,19 +955,20 @@ input, textarea, select {
 .diferencial-card h3 {
     font-size: 1.15rem;
     margin-bottom: 14px;
-    color: var(--gray-800);
+    color: var(--white);
 }
 
 .diferencial-card p {
     font-size: 0.9rem;
-    color: var(--gray-500);
+    color: var(--gray-400);
     line-height: 1.7;
 }
 
 /* ---------- Sustentabilidade Section ---------- */
 .sustentabilidade {
     padding: 120px 0;
-    background: var(--gray-50);
+    background: linear-gradient(180deg, #1b2e44 0%, #1e3249 100%);
+    color: var(--gray-200);
 }
 
 .sustentabilidade-grid {
@@ -974,7 +980,7 @@ input, textarea, select {
 }
 
 .sustentabilidade-content .section-title { margin-bottom: 20px; }
-.sustentabilidade-content > p { color: var(--gray-600); margin-bottom: 32px; }
+.sustentabilidade-content > p { color: var(--gray-400); margin-bottom: 32px; }
 
 .sustentabilidade-benefits {
     display: flex;
@@ -1007,12 +1013,12 @@ input, textarea, select {
 .benefit-content h4 {
     font-size: 1.05rem;
     margin-bottom: 4px;
-    color: var(--gray-800);
+    color: var(--white);
 }
 
 .benefit-content p {
     font-size: 0.9rem;
-    color: var(--gray-500);
+    color: var(--gray-400);
 }
 
 .sustentabilidade-image { position: relative; }
@@ -1054,11 +1060,11 @@ input, textarea, select {
     display: flex;
     gap: 28px;
     align-items: center;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.05);
     padding: 40px;
     border-radius: var(--radius-lg);
-    box-shadow: var(--shadow-sm);
-    border: 1px solid var(--gray-200);
+    box-shadow: none;
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .acv-icon {
@@ -1077,11 +1083,11 @@ input, textarea, select {
 .acv-content h3 {
     font-size: 1.2rem;
     margin-bottom: 8px;
-    color: var(--gray-800);
+    color: var(--white);
 }
 
 .acv-content p {
-    color: var(--gray-600);
+    color: var(--gray-400);
     line-height: 1.7;
     font-size: 0.95rem;
 }
@@ -1270,9 +1276,10 @@ input, textarea, select {
 /* ---------- Casa Modelo Section ---------- */
 .casa-modelo-section {
     padding: 120px 0;
-    background: var(--white);
+    background: linear-gradient(180deg, #243a52 0%, #27405a 100%);
     position: relative;
     overflow: hidden;
+    color: var(--gray-200);
 }
 
 .modelos-grid {
@@ -1283,20 +1290,20 @@ input, textarea, select {
 
 .modelo-card {
     display: block;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-xl);
     overflow: hidden;
-    box-shadow: var(--shadow-md);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     transition: var(--transition-normal);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     text-decoration: none;
     color: inherit;
 }
 
 .modelo-card:hover {
     transform: translateY(-8px);
-    box-shadow: var(--shadow-xl);
-    border-color: transparent;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.3);
+    border-color: rgba(46, 184, 212, 0.2);
 }
 
 .modelo-card.duplex {
@@ -1396,7 +1403,7 @@ input, textarea, select {
 }
 
 .modelo-content p {
-    color: var(--gray-500);
+    color: var(--gray-400);
     font-size: 0.95rem;
     margin-bottom: 20px;
     line-height: 1.6;
@@ -1414,19 +1421,20 @@ input, textarea, select {
     gap: 6px;
     font-size: 0.85rem;
     font-weight: 500;
-    color: var(--gray-700);
+    color: var(--gray-300);
 }
 
 .modelo-specs i {
-    color: var(--accent-blue);
+    color: var(--accent-cyan);
     font-size: 0.9rem;
 }
 
 /* ---------- Galeria Section ---------- */
 .galeria {
     padding: 120px 0;
-    background: var(--gray-50);
-    border-top: 1px solid var(--gray-200);
+    background: linear-gradient(180deg, #1b2e44 0%, #1e3249 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    color: var(--gray-200);
 }
 
 .galeria-grid {
@@ -1544,7 +1552,8 @@ input, textarea, select {
 /* ---------- Contato Section ---------- */
 .contato {
     padding: 120px 0;
-    background: var(--white);
+    background: linear-gradient(180deg, #243a52 0%, #27405a 100%);
+    color: var(--gray-200);
 }
 
 .contato-grid {
@@ -1564,16 +1573,17 @@ input, textarea, select {
     gap: 16px;
     align-items: flex-start;
     padding: 20px 24px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-md);
     transition: var(--transition-normal);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .info-card:hover {
-    border-color: rgba(26, 127, 184, 0.25);
-    box-shadow: var(--shadow-md);
+    border-color: rgba(46, 184, 212, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
     transform: translateX(4px);
+    background: rgba(255, 255, 255, 0.08);
 }
 
 .info-icon {
@@ -1607,33 +1617,33 @@ input, textarea, select {
 .info-content h4 {
     font-size: 0.9rem;
     margin-bottom: 4px;
-    color: var(--gray-800);
+    color: var(--white);
 }
 
 .info-content p {
     font-size: 0.9rem;
-    color: var(--gray-500);
+    color: var(--gray-400);
 }
 
 .info-content a {
-    color: var(--primary-500);
+    color: var(--accent-cyan);
 }
 
 .info-content a:hover {
-    color: var(--accent-cyan);
+    color: var(--primary-200);
 }
 
 .social-links {
     padding: 20px 24px;
-    background: var(--white);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-md);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .social-links h4 {
     font-size: 0.9rem;
     margin-bottom: 14px;
-    color: var(--gray-800);
+    color: var(--white);
 }
 
 .social-icons {
@@ -1665,10 +1675,10 @@ input, textarea, select {
 
 /* Form */
 .contato-form {
-    background: var(--gray-50);
+    background: rgba(255, 255, 255, 0.05);
     padding: 40px;
     border-radius: var(--radius-xl);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     box-shadow: none;
 }
 
@@ -1684,7 +1694,7 @@ input, textarea, select {
     display: block;
     margin-bottom: 8px;
     font-weight: 600;
-    color: var(--gray-700);
+    color: var(--gray-300);
     font-size: 0.85rem;
 }
 
@@ -1693,20 +1703,30 @@ input, textarea, select {
 .form-group textarea {
     width: 100%;
     padding: 14px 18px;
-    border: 1.5px solid var(--gray-300);
+    border: 1.5px solid rgba(255, 255, 255, 0.12);
     border-radius: var(--radius-md);
-    background: var(--gray-50);
+    background: rgba(255, 255, 255, 0.06);
     transition: var(--transition-normal);
-    color: var(--gray-800);
+    color: var(--white);
 }
 
 .form-group input:focus,
 .form-group select:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: var(--accent-blue);
-    background: var(--white);
-    box-shadow: 0 0 0 4px rgba(26, 127, 184, 0.06);
+    border-color: var(--accent-cyan);
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 0 4px rgba(46, 184, 212, 0.1);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--gray-500);
+}
+
+.form-group select option {
+    background: var(--primary-800);
+    color: var(--white);
 }
 
 .form-group textarea {
@@ -2002,14 +2022,14 @@ input, textarea, select {
 /* Photo Gallery on detail pages */
 .photo-gallery {
     padding: 80px 0;
-    background: var(--gray-50);
+    background: linear-gradient(180deg, #1b2e44 0%, #1e3249 100%);
 }
 
 .gallery-section-title {
     font-size: 1.8rem;
     margin-bottom: 32px;
     padding-bottom: 16px;
-    border-bottom: 2px solid var(--gray-200);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
 }
 
 .gallery-grid {
@@ -2084,7 +2104,7 @@ input, textarea, select {
 /* Specs section in detail pages */
 .specs-section {
     padding: 80px 0;
-    background: var(--white);
+    background: linear-gradient(180deg, #243a52 0%, #27405a 100%);
 }
 
 .specs-grid {
@@ -2097,20 +2117,20 @@ input, textarea, select {
 .spec-card {
     text-align: center;
     padding: 32px 24px;
-    background: var(--gray-50);
+    background: rgba(255, 255, 255, 0.05);
     border-radius: var(--radius-lg);
-    border: 1px solid var(--gray-200);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     transition: var(--transition-normal);
 }
 
 .spec-card:hover {
-    border-color: rgba(26, 127, 184, 0.15);
-    box-shadow: var(--shadow-md);
+    border-color: rgba(46, 184, 212, 0.25);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
 }
 
 .spec-card i {
     font-size: 1.6rem;
-    color: var(--accent-blue);
+    color: var(--accent-cyan);
     margin-bottom: 12px;
 }
 
@@ -2121,7 +2141,7 @@ input, textarea, select {
 
 .spec-card p {
     font-size: 0.85rem;
-    color: var(--gray-500);
+    color: var(--gray-400);
 }
 
 .back-link {
@@ -2245,9 +2265,10 @@ input, textarea, select {
         width: 85%;
         max-width: 350px;
         height: 100vh;
-        background: var(--white);
+        background: rgba(10, 22, 40, 0.97);
+        backdrop-filter: blur(20px);
         padding: 100px 32px;
-        box-shadow: var(--shadow-xl);
+        box-shadow: -4px 0 30px rgba(0, 0, 0, 0.4);
         transition: var(--transition-normal);
         z-index: 1000;
     }
@@ -2261,7 +2282,7 @@ input, textarea, select {
     }
 
     .nav-link {
-        color: var(--gray-800);
+        color: var(--gray-300);
         font-size: 1.05rem;
     }
 
