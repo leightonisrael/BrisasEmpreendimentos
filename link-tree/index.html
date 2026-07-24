@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Brisas Empreendimentos - Todos os nossos links em um só lugar. Site oficial, disponibilidade de unidades, diário de obras e financiamento.">
+    <title>Brisas Empreendimentos | Links</title>
+
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="apple-touch-icon" href="favicon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-900: #0a1628;
+            --primary-800: #0f2137;
+            --primary-700: #152e4a;
+            --primary-400: #2478b5;
+            --primary-300: #4a9dd6;
+            --primary-200: #8bc4eb;
+            --accent-cyan: #2eb8d4;
+            --accent-blue: #1a7fb8;
+            --accent-electric: #3d6dbd;
+            --gradient-main: linear-gradient(135deg, #1a7fb8 0%, #2478b5 50%, #3d6dbd 100%);
+            --font-primary: 'Space Grotesk', sans-serif;
+            --font-secondary: 'Inter', sans-serif;
+        }
+
+        *, *::before, *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-secondary);
+            min-height: 100vh;
+            color: #fff;
+            background-color: var(--primary-900);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .bg {
+            position: fixed;
+            inset: 0;
+            background-image: url('hero-1.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: -2;
+        }
+
+        .bg-overlay {
+            position: fixed;
+            inset: 0;
+            background: linear-gradient(160deg, rgba(10, 22, 40, 0.92) 0%, rgba(21, 46, 74, 0.9) 50%, rgba(26, 127, 184, 0.75) 100%);
+            z-index: -1;
+        }
+
+        .card {
+            width: 100%;
+            max-width: 520px;
+            padding: 48px 24px 32px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            animation: fadeUp 0.7s ease both;
+        }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(24px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .logo {
+            width: 190px;
+            max-width: 60%;
+            margin-bottom: 20px;
+            filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.35));
+        }
+
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            letter-spacing: 0.04em;
+            padding: 8px 18px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            color: var(--primary-200);
+            margin-bottom: 14px;
+        }
+
+        .badge i { color: var(--accent-cyan); }
+
+        .tagline {
+            font-family: var(--font-primary);
+            font-size: 1.05rem;
+            font-weight: 500;
+            text-align: center;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 36px;
+        }
+
+        .tagline .gradient-text {
+            background: linear-gradient(135deg, var(--accent-cyan), var(--primary-300));
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 700;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        a, button {
+            cursor: pointer;
+        }
+
+        .link-btn {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            width: 100%;
+            padding: 18px 22px;
+            border-radius: 16px;
+            text-decoration: none;
+            color: #fff;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.09) 0%, rgba(255, 255, 255, 0.04) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.14);
+            backdrop-filter: blur(10px);
+            transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+        }
+
+        .link-btn:hover,
+        .link-btn:focus-visible {
+            transform: translateY(-3px);
+            border-color: rgba(46, 184, 212, 0.6);
+            background: linear-gradient(135deg, rgba(6, 13, 24, 0.85) 0%, rgba(13, 28, 46, 0.75) 100%);
+            box-shadow: 0 8px 32px rgba(26, 127, 184, 0.35);
+        }
+
+        .link-icon {
+            flex-shrink: 0;
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.25rem;
+            background: var(--gradient-main);
+            box-shadow: 0 0 24px rgba(26, 127, 184, 0.35);
+        }
+
+        .link-text {
+            display: flex;
+            flex-direction: column;
+            gap: 2px;
+            min-width: 0;
+        }
+
+        .link-title {
+            font-family: var(--font-primary);
+            font-size: 1.02rem;
+            font-weight: 600;
+            letter-spacing: 0.01em;
+        }
+
+        .link-desc {
+            font-size: 0.82rem;
+            color: rgba(255, 255, 255, 0.65);
+        }
+
+        .link-arrow {
+            margin-left: auto;
+            color: rgba(255, 255, 255, 0.4);
+            font-size: 0.9rem;
+            transition: transform 0.25s ease, color 0.25s ease;
+        }
+
+        .link-btn:hover .link-arrow {
+            transform: translateX(4px);
+            color: var(--accent-cyan);
+        }
+
+        .socials {
+            display: flex;
+            gap: 16px;
+            margin-top: 36px;
+        }
+
+        .social-icon {
+            width: 46px;
+            height: 46px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            color: #fff;
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            transition: transform 0.25s ease, background 0.25s ease, border-color 0.25s ease;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-3px) scale(1.06);
+            background: var(--gradient-main);
+            border-color: transparent;
+        }
+
+        .social-icon.whatsapp:hover {
+            background: linear-gradient(135deg, #25d366 0%, #128c7e 100%);
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.5);
+            line-height: 1.7;
+            padding-bottom: 8px;
+        }
+
+        .footer a {
+            color: var(--primary-200);
+            text-decoration: none;
+        }
+
+        .footer a:hover { color: var(--accent-cyan); }
+
+        @media (max-width: 400px) {
+            .card { padding: 36px 16px 24px; }
+            .link-btn { padding: 16px 16px; gap: 12px; }
+            .link-icon { width: 42px; height: 42px; font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="bg-overlay"></div>
+
+    <main class="card">
+        <img src="logo-white.png" alt="Brisas Empreendimentos" class="logo"
+             onerror="this.outerHTML='&lt;h1 style=&quot;font-family:var(--font-primary);margin-bottom:20px;&quot;&gt;BRISAS&lt;/h1&gt;'">
+
+        <span class="badge"><i class="fas fa-award"></i> + de 17 anos construindo sonhos</span>
+        <p class="tagline">Realizando o sonho da <span class="gradient-text">casa própria</span> em Extremoz/RN</p>
+
+        <nav class="links">
+            <a href="https://brisasempreendimentos.com.br" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <span class="link-icon"><i class="fas fa-globe"></i></span>
+                <span class="link-text">
+                    <span class="link-title">Site Oficial</span>
+                    <span class="link-desc">Conheça a Brisas e nossos empreendimentos</span>
+                </span>
+                <i class="fas fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://disponibilidade.brisasempreendimentos.com.br" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <span class="link-icon"><i class="fas fa-house-circle-check"></i></span>
+                <span class="link-text">
+                    <span class="link-title">Disponibilidade</span>
+                    <span class="link-desc">Confira as unidades disponíveis</span>
+                </span>
+                <i class="fas fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://diario.brisasempreendimentos.com.br" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <span class="link-icon"><i class="fas fa-helmet-safety"></i></span>
+                <span class="link-text">
+                    <span class="link-title">Diário de Obras</span>
+                    <span class="link-desc">Acompanhe o andamento da sua obra</span>
+                </span>
+                <i class="fas fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://financiamento.brisasempreendimentos.com.br" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <span class="link-icon"><i class="fas fa-hand-holding-dollar"></i></span>
+                <span class="link-text">
+                    <span class="link-title">Financiamento</span>
+                    <span class="link-desc">Simule e financie sua casa própria</span>
+                </span>
+                <i class="fas fa-chevron-right link-arrow"></i>
+            </a>
+
+            <a href="https://app.crmdecorretor.com.br/brisas/login" target="_blank" rel="noopener noreferrer" class="link-btn">
+                <span class="link-icon"><i class="fas fa-user-tie"></i></span>
+                <span class="link-text">
+                    <span class="link-title">CRM</span>
+                    <span class="link-desc">Acesso para corretores</span>
+                </span>
+                <i class="fas fa-chevron-right link-arrow"></i>
+            </a>
+        </nav>
+
+        <div class="socials">
+            <a href="https://wa.me/558491153838" target="_blank" rel="noopener noreferrer" class="social-icon whatsapp" aria-label="WhatsApp">
+                <i class="fab fa-whatsapp"></i>
+            </a>
+            <a href="https://www.instagram.com/brisasempreendimentos/" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="mailto:comercial@brisasempreendimentos.com.br" class="social-icon" aria-label="E-mail">
+                <i class="fas fa-envelope"></i>
+            </a>
+        </div>
+
+        <footer class="footer">
+            <a href="mailto:comercial@brisasempreendimentos.com.br">comercial@brisasempreendimentos.com.br</a><br>
+            &copy; 2026 Brisas Empreendimentos &mdash; Extremoz/RN
+        </footer>
+    </main>
+</body>
+</html>
